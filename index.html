@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&display=swap" rel="stylesheet">
+    <title > Tran Ngoc Anh Dung</title>
+</head>
+<body>
+   
+    <link rel="stylesheet" href="Index.css">
+
+    <div class="top">
+        <h1>Trần Ngọc Anh Dũng</h1>
+        <p>Ron</p> 
+    </div>
+    <div id="main">
+        <img src="image/2141033f0058c2069b49.jpg" alt="Ảnh Face" id="face" width="200">
+        <p>Hello, I'm Dũng and my nickname is Ron</p> 
+    </div>
+
+    <div id="BST">
+            <button class="collection">
+                ㅤㅤIMAGEㅤㅤ
+           </button>
+           <div id="openimage">
+           <button class="box box5">ㅤOPENㅤ</button>
+           </div>
+        <div id="image" >
+            <button class="box-im">
+                <img src="image/ảnh lp1.jpg" alt="image 1" id="p1" width="320"></br>
+                <img src="image/lth2.jpg" alt="image 2" id="p1" width="320"></br>
+                <img src="image/lth1.jpg" alt="image 3" id="p1" width="320"></br>
+                <img src="image/bg1.jpg" alt="Chờ cập nhật ảnh..." id="p1" width="320"></br>
+                <img src="image/môi.jpg" alt="Chờ cập nhật ảnh..." id="p1" width="320"></br>
+                <img src="" alt="Chờ cập nhật ảnh..." id="p1" width="320"></br>
+                <img src="" alt="Chờ cập nhật ảnh..." id="p1" width="320"></br>
+            </button>
+            <div id="closeimage">
+                <button class="box box6">ㅤㅤCLOSEㅤㅤ</button>
+            </div>  
+        </div>
+    </div>
+
+    <div id="end">
+            
+            <div>
+                <button class="collection">
+                    ㅤㅤCONTACTㅤㅤ
+               </button>
+                <div id="opencontact">
+                <button class="box box5">ㅤOPENㅤ</button>
+                </div>
+            </div> 
+            <div id="bt">
+                     <button class="box box1" onclick="location.href='https://www.facebook.com/ron292004/'">   
+                     <h3>
+                        <img src="image/Facebook_f_logo_(2019).svg.png" alt="logo facebook" width="40" id="LG1">
+                        Facebook
+                     </h3>
+                     </button></br>
+                     <button class="box box2" onclick="location.href=' https://www.instagram.com/ron_19102004/ '">
+                     <h3>
+                            <img src="image/Instagram_logo_2016.svg.webp" alt="logo instagram" width="40" id="LG2">
+                        Instagram
+                    </h3> 
+                    </button></br>
+                    <button class="box box3">
+                    <h3>
+                           <img src="image/kakapo.png" alt="logo kakaotalk" width="40" id="LG3">
+                       KakaoTalk ID: ron191004
+                   </h3> 
+                   </button></br>
+                    <button class="box box4">
+                    <h3>
+                           <img src="image/281769.png" alt="logo gmail" width="40" id="LG4">
+                    Gmail:ron19102004@gmail.com
+                   </h3>  
+                    </button >
+                    <div id="closecontact">
+                        <button class="box box6">ㅤㅤCLOSEㅤㅤ</button>
+                    </div>
+            </div>
+    </div>
+     <div id="bq">
+        <h5>
+            ©2022 by Ron 
+        </h5>
+    </div>
+    <script>
+      /*
+        const home= document.querySelector('#face');
+        face.onmouseover = () =>
+        {
+            face.style.width= '300px';
+        }
+        face.onmouseleave = ()=>
+        {
+            face.style.width= '100px';
+        }*/
+        const openimage= document.querySelector('#openimage');
+        const closeimage=document.querySelector('#closeimage');
+        const image=document.querySelector('#image');
+        openimage.onclick=() =>
+        {
+         image.style.display =' block';
+         openimage.style.display='none';
+        }
+        closeimage.onclick=()=>{
+         image.style.display =' none';
+         openimage.style.display='block';
+        }
+
+        const opencontact= document.querySelector('#opencontact');
+        const closecontact=document.querySelector('#closecontact');
+        const bt=document.querySelector('#bt');
+        bt.style.display='none';
+        opencontact.onclick=() =>
+        {
+         bt.style.display =' block';
+         opencontact.style.display='none';
+        }
+        closecontact.onclick=()=>{
+         bt.style.display =' none';
+         opencontact.style.display='block';
+        }
+        
+
+    </script>
+
+</body>
+</html>

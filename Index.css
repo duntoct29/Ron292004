@@ -1,0 +1,156 @@
+.top {
+    color:  yellow;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+    margin-top: 0px;
+    margin-bottom: 0px; 
+    margin-left: auto; 
+    margin-right: auto;
+    font-family:'Dancing Script';
+}
+
+#face{  
+    border: solid;
+    border-color: rgb(54, 0, 91);
+    border-radius: 50px;
+}
+.top p{
+   font-size: 30px;
+   margin: 5px 0 0 0;
+   font-family:'Dancing Script';
+}
+.top h1{
+    margin: 5px 0 0 0;
+}
+#main{
+    margin-top: 30px;
+    padding: 0 30px 0 30px;
+    text-align: center;
+    transition: all 1s;
+    
+}
+#main p{
+    font-weight: 900;
+    color: rgb(0, 255, 72);
+    font-size: 18px;
+    font-family:'Arial';
+}
+#end 
+{
+ color:rgb(0, 251, 29);
+ text-align: center;
+ margin: 0 0 0 0 ;
+}
+html{
+    background: url('image/w.png');
+    background-size:auto;
+     margin: 0px 0px 0px 0px;
+     margin-left: auto; 
+     margin-right: auto;
+}
+
+#LG1 , #LG2 ,#LG3 , #LG4
+{
+    transition: all 1s;
+}
+
+#BST {
+    text-align: center;
+}
+body{
+    margin: 10px 20px 60px 20px;
+ 
+}
+.box{ 
+    border: solid;
+    color: black;
+    padding: 0 15px 0 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 0 7px 0;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 15px;
+    /*
+    -moz-border-radius: 20%;
+    -webkit-border-radius: 20%;
+    */
+}
+.box1{
+    background-color: white;
+}
+.box1:hover{
+    background-color: blue;
+    color: white;
+    border-color: blue;
+}
+.box2{
+    background-color: white;
+}
+.box2:hover{
+    background-color: rgb(255, 34, 34);
+    color: white;
+    border-color: rgb(255, 34, 34);
+
+}
+.box3{ background-color: white;}
+.box3:hover{ 
+    background-color: rgb(146, 88, 12);
+    color: rgb(220, 255, 47);
+    border-color:  rgb(146, 88, 12);}
+.box4{ background-color: white;}
+.box4:hover{ 
+    background-color: rgb(248, 0, 0);
+    color: rgb(255, 255, 255);
+    border-color:  rgb(248, 0, 0) ;}
+.box5{
+    border-color: rgb(0, 90, 39);
+    background-color: white;
+    font-weight: 900;}
+.box6{
+    border-color: rgb(0, 90, 39);
+    background-color: white;
+    font-weight: 900;
+
+}
+.collection {
+    border: solid;
+    padding: 0 15px 0 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 0 7px 0;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    color:rgb(0, 14, 121);
+    font-size: 20px;
+    font-weight: 900;
+    background-color: rgb(190, 60, 255);
+    border-radius: 60px;
+    border-color: rgb(0, 140, 254);
+}
+#image{
+    display: none;
+    margin: 0px;
+}
+.box-im{
+    padding: 0px;
+    margin: 2px 4px 10px 4px ;
+    margin-left: auto; 
+    margin-right: auto;
+    border-radius: 20px;
+}
+#p1 {
+    margin-top: 0px;
+    border-radius: 20px;
+}
+#bq{
+    margin-left: auto; 
+    margin-right: auto;
+    color: rgb(255, 255, 255);
+    text-align: center;
+
+}
