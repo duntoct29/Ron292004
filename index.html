@@ -10,7 +10,8 @@
         <title>Ron's Home</title>
     </head>
 <body>
-     <link rel="stylesheet" href="Index.css">
+     <script src="javascript.js"></script>
+     <link rel="stylesheet" href="style.css">
 <div class="box_of_all">
 
     <div id="header">
@@ -21,20 +22,38 @@
         <nav class="container">
             <img src="image/logo.png" alt="Rondo" id="logo" width="50">
             <ul id="list-control">
-                <li><a id="home" style="border: 5px solid rgb(218, 237, 71);" ><i style="color:rgb(45, 206, 94)" class="fa-solid fa-house"></i> Trang Chủ
+                <li><a id="home" style="border: 4px solid rgb(218, 237, 71);" ><i style="color:rgb(45, 206, 94)" class="fa-solid fa-house"></i> Trang Chủ
                 </a></li>
-                <li><a id="list_music" style="border: 5px solid rgb(218, 237, 71);"><i style="color:rgb(45, 206, 94)" class="fa-solid fa-circle-user"></i>List Nhạc</a></li>
-                <li><a id="in4" style="border: 5px solid rgb(218, 237, 71);"><i style="color:rgb(45, 206, 94)" class="fa-solid fa-circle-user"></i> Giới Thiệu</a></li>
+                <li><a id="list_music" style="border: 4px solid rgb(218, 237, 71);"><i style="color:rgb(45, 206, 94)" class="fa-solid fa-circle-user"></i>List Nhạc</a></li>
+                <li><a id="in4" style="border: 4px solid rgb(218, 237, 71);"><i style="color:rgb(45, 206, 94)" class="fa-solid fa-circle-user"></i> Giới Thiệu</a></li>
             </ul>
         </nav>
     </div>
-
-    <div id="intro_pic">
-        <div id="collection">
-            <img id="img" onclick="changeImage()"src="image/p1.png" alt="welcome to" width="100%" >
+    
+    <div id="advertisement">
+        <button class="ads">
+    
+         <div id="close">
+            <img src="image/x-png-icon-20.jpg" width="30" id="close_ads">
         </div>
+
+        <div>
+            <img src="image/ads_web.png" alt="topic" id="ads_web" width="100%">
+        </div>
+
+        <div>
+            <img src="image/ads_mb_n.png" alt="topic" id="ads_mobile" width="100%">
+        </div>
+    
+        </button>
     </div>
     
+    <div id="intro_pic">
+        <div id="collection">
+            <img  id="img" src="image/p1.png" alt="welcome to" width="100%" >
+        </div>
+    </div>
+
     <h1 id="my_favorite" style="font-family: 'Verdana';color: red;"> My Favorite Playlist </h1>
     <div class="favorite">
         <button class="box-scroll">
@@ -118,48 +137,5 @@
     </div>
 
 </div>
-<script>
-       var index = 1;
-    changeImage = function (){
-        var imgs = ["image/p1.png","image/p2.png","image/p3.png","image/p4.png","image/p5.png","image/pic6.png"];
-        document.getElementById('img').src= imgs[index];
-        index++;
-        if (index==6)
-        {
-            index = 0;
-        }
-    }
-    setInterval(changeImage,2500);
-    $(document).ready(function(){
-        $(window).scroll(function(){
-            if($(this).scrollTop()){
-                $('#back-top').fadeIn();
-            }else{
-                $('#back-top').fadeOut();
-            };
-       });
-       $('#back-top').click(function(){
-        $('html,body').animate({scrollTop:0},'slow');
-       });
-       $('#home').click(function(){
-        $('html,body').animate({
-           scrollTop: $('#intro_pic').offset().top
-        },'slow');
-       });
-       $('#list_music').click(function(){
-        $('html,body').animate({
-           scrollTop: $('#my_favorite').offset().top
-        },'slow');
-       });
-       $('#in4').click(function(){
-        $('html,body').animate({
-           scrollTop: $('#my_profile').offset().top
-        },'slow');
-       });
-       $('#toggle').click(function(){
-        $('nav').slideToggle()});
-    });
-
-</script>
 </body>
 </html>
