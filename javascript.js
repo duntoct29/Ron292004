@@ -19,6 +19,7 @@
        });
        $('#back-top').click(function(){
         $('html,body').animate({scrollTop:0},'slow');
+        stop_music();
        });
 
        $('#home').click(function(){
@@ -46,8 +47,23 @@
         $('#advertisement').css({
             'display':'none'
         });
+        play_music();
        });
     });
 setTimeout(function(){
-    document.getElementById('advertisement').style.display='block'
-},1500)
+    document.getElementById('advertisement').style.display='block';
+},1200);
+
+play_music=function(){
+    const music=document.querySelector('#music_html');
+    music.play();
+    setTimeout(function(){
+        alert('Click nút mũi tên để tắt nhạc nhe 😉');
+    },400)
+    
+};
+stop_music=function(){
+    const music=document.querySelector('#music_html');
+    music.pause();
+};
+
