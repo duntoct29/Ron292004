@@ -1,6 +1,6 @@
 /*Header*/
 #header{
-    background-color:rgb(31 32 40);
+    background-color:rgba(43, 43, 45, 0.771);
     height: 50px;
     border-radius: 0px;
     width: 100%;
@@ -26,13 +26,15 @@
     font-size: 18px;
     text-decoration: none;
     padding: 10px 60px 10px 60px;
-    color: wheat;
+    color: white;
     font-weight: 600 ;
-    border-radius: 30px;
     margin: 0 15px 0 0;
     font-family:'Verdana';
+    animation: change_color 0.5s infinite linear;
+    border-radius: 30px;
     background-color: rgba(255, 255, 255, 0.123);
-    animation: change_color 1s infinite linear;
+    border: 4px solid yellow;
+
 }
 #list-control li:hover a {
     color: rgb(212, 117, 247);
@@ -50,7 +52,7 @@ nav{
     justify-items: center;
 }
 html{
-    background-color: rgb(31 32 40);
+    background-color: rgba(31, 32, 40, 0.344);
     min-height: 100%;
     height: 100%;
 }
@@ -70,10 +72,81 @@ body::-webkit-scrollbar-thumb{
     background-image: linear-gradient(-45deg, #6a5af9, #d66efd);
 
 }
+/*box-spin*/
+.box_spin{
+    position: fixed;
+    border: 1px;
+    width:100%;
+    height: 100%;
+    padding: 0;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    animation: spin_box_spin 3s linear infinite;
+}
+@keyframes spin_box_spin {
+    0%{
+        border-top-left-radius: 30%;
+        border-top-right-radius: 80%;
+        border-bottom-right-radius: 90%;
+        border-bottom-left-radius: 100% ;
+        transform: rotate(0deg);
+    }
+    20%{
+        border-top-left-radius: 100%;
+        border-top-right-radius: 30%;
+        border-bottom-left-radius: 60% ;
+        border-bottom-right-radius: 80%;
+        transform: rotate(72deg);
+    }
+    40%{
+        border-top-left-radius: 80%;
+        border-top-right-radius: 100%;
+        border-bottom-right-radius: 70%;
+        border-bottom-left-radius: 30% ;
+        transform: rotate(144deg);
+    }
+    60%{
+        border-top-left-radius: 50%;
+        border-top-right-radius: 80%;
+        border-bottom-left-radius: 100% ;
+        border-bottom-right-radius: 80%;
+        transform: rotate(216deg);
+    }
+    80%{
+        border-top-left-radius: 40%;
+        border-top-right-radius: 80%;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 90% ;
+        transform: rotate(288deg);
+    }
+    100%{
+        border-top-left-radius: 60%;
+        border-top-right-radius: 100%;
+        border-bottom-left-radius: 90% ;
+        border-bottom-right-radius: 80%;
+        transform: rotate(360deg);
+    }
+   
+}
+#body_spin{
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    animation: change_color_spin 5s linear infinite;
+}
+@keyframes change_color_spin {
+    0%{ background-image: linear-gradient(95deg,rgb(255, 0, 204),rgb(255, 242, 0));}
+    25%{ background-image: linear-gradient(95deg,rgb(255, 242, 0),rgb(255, 0, 204));}
+    50%{background-image: linear-gradient(95deg,rgb(255, 0, 204),rgb(255, 242, 0));}
+    75%{ background-image: linear-gradient(95deg,rgb(255, 242, 0),rgb(255, 0, 204));}
+    100%{ background-image: linear-gradient(95deg,rgb(255, 0, 204),rgb(255, 242, 0));}
+}
 
 /*ads*/
 #advertisement{display: none;}
 .ads{
+    padding: 0;
     width:auto;
     height: auto;
     border: 5px solid;
@@ -83,7 +156,8 @@ body::-webkit-scrollbar-thumb{
     left: 15%;
     right: 15%;
     z-index: 1;
-    background: url('image/bgr_ads.png');
+    background-color: 
+    rgba(31, 32, 40, 0.433);
     border-top-color: red;
     border-radius: 20px;
     animation: change_color 1s linear infinite ;
@@ -127,7 +201,11 @@ body::-webkit-scrollbar-thumb{
     text-align: right;
 }
 #ads_mobile{display: none;}
-#ads_web{display: block;}
+#ads_web{
+    display: block;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
 /*favorite*/
 #video{
     display: block;
@@ -144,12 +222,15 @@ iframe{
 .favorite{display: flex;position: relative;}
 #text-talk{
    flex-basis: 30%;
-   padding: 0 30px 0 20px;
    color: white;
+   background-color: 
+    rgba(31, 32, 40, 0.433);
+    border-radius: 20px;
+    margin: 0 30px 0 20px;
 }
 #text-talk p {
     font-family: 'Verdana';
-    font-size: 19px;
+    font-size: 18px;
 }
 .box-scroll{
     width: 1050px;
@@ -158,7 +239,7 @@ iframe{
     border: 8px solid ;
     border-color: green;
     border-radius: 20px;
-    background-color: rgb(45, 46, 47);
+    background-color: rgba(31, 32, 40, 0.344);
     overflow-y: scroll;
     animation: change_color_box_scroll 0.5s linear infinite;
 }
@@ -194,7 +275,7 @@ iframe{
     text-align: center;
     height: 100%;
     padding-bottom: 5px;
-    background-color:rgb(31 32 40);
+    background-color:rgba(31, 32, 40, 0.344);
 }
 #my_profile{
     animation: change_color_text 1s linear infinite;
@@ -210,7 +291,7 @@ iframe{
     border-radius: 20px;
     border-color: rgb(138, 0, 138);
     margin-bottom: 15px;
-    background-color:  rgb(31 32 40);
+    background-color:  rgba(31, 32, 40, 0.433);
     margin: 0 10px 0 10px;}
 #sidebar{
     flex-basis: 40%;
@@ -218,7 +299,7 @@ iframe{
     border-radius: 20px;
     border-color: rgb(138, 0, 138);
     background-color: 
-    rgb(31 32 40);
+    rgba(31, 32, 40, 0.433);
     margin: 0 10px 0 10px;
 }
 #sidebar,#main-profile{
@@ -397,7 +478,10 @@ body{
     right: 3%;
     top: 20%;
 }
-#ads_mobile{display: block;}
+#ads_mobile{
+    display: block; 
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;}
 #ads_web{display: none;}
 /*my picture*/
 /*my favorite*/
@@ -408,7 +492,7 @@ body{
     font-size: 15px;
     font-family: 'Verdana';
     margin: 0 auto;
-    background-color: rgb(31 32 40);
+    background-color: rgba(31, 32, 40, 0.344);
 }
 iframe{
     padding: 0;
@@ -418,7 +502,7 @@ iframe{
 .box-scroll{
         width: 100%;
         height:630px ;
-        background-color:rgb(31 32 40);
+        background-color: rgba(31, 32, 40, 0.344);
         border:6px solid;
         border-color: green;
     }
