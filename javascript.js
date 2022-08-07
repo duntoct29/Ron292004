@@ -1,9 +1,9 @@
     var index = 1;
     changeImage = function (){
-        var imgs = ["image/p1.png","image/p2.png","image/p3.png","image/p4.png","image/p5.png","image/pic6.png"];
+        var imgs = ["image/p1.png","image/p2.png","image/p3.png","image/p4.png","image/p5.png"];
         document.getElementById('img').src= imgs[index];
         index++;
-        if (index==6)
+        if (index==5)
         {
             index = 0;
         }
