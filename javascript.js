@@ -79,9 +79,14 @@
             'display':'none'
           });
       });
+      $('.list_play').click(function(){
+        $('#control_video').css({
+            'display':'none'
+          });
+      });
     });
 setTimeout(function(){
-    document.getElementById('advertisement').style.display= 'none';
+    document.getElementById('advertisement').style.display= 'block';
 },1200);
 play_music=function(){
     const music=document.querySelector('#music_html');

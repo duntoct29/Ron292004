@@ -557,6 +557,14 @@ body{
 #ads_web{display: none;}
 /*my picture*/
 /*my favorite*/
+#list_video{
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    background-color: rgba(31, 32, 40, 0.344);
+    margin: 10px 0;
+    position: static;
+    }
 #control_video{
     top: 45px;
 }
