@@ -207,40 +207,112 @@ body::-webkit-scrollbar-thumb{
     border-bottom-right-radius: 20px;
 }
 /*favorite*/
+#control_ytb{
+    list-style: none;
+    padding: 0;
+}
+#control_ytb li{
+    cursor: pointer;
+    margin: 7%;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 60px 10px 60px;
+    color: white;
+    font-weight: 600 ;
+    font-family:'Verdana';
+    animation: change_color 0.5s infinite linear;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.123);
+    border: 4px solid yellow;
+
+}
+#close_control{cursor: pointer;}
+#close_control_video{
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+#box_ct_video{
+    top: 20%;
+}
+#control_video{
+    padding: 0;
+    z-index: 1;
+    display: none;
+    color: white;
+    background-color: 
+    rgba(31, 32, 40, 0.918);
+    border-radius: 0px;
+    font-family: 'Verdana';
+    position:fixed;
+    top: 51px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
 #video{
     display: block;
     color: white;
-    flex-basis: 70%;
-    padding: 0 30px 0 30px;
+    
+}
+#list_video{
+    display: none;
+    padding: 0;
+    position: fixed;
+    font-family: 'Verdana';
+    text-align: center;
+    color: white;
+    background-color: 
+    rgb(31, 32, 40);
+    border-radius: 20px;
+    z-index: 1;
+    top: 10%;
+    left: 15%;
+    right: 10%;
+    width: 70%;
+    height: 80%;
+    font-size: 20px;
+}
+#close_list{cursor: pointer;}
+#close_list_video{
+   text-align: right;
+    padding-right: 10px;
+    padding-top: 5px;
 }
 iframe{
-    padding:5px;
-    height: 250px;
-    width: 450px;
+    display: block;
+    width: 100%;
+    height:570px ;
     border-radius: 20px;
 }
 .favorite{display: flex;position: relative;}
 #text-talk{
-   flex-basis: 30%;
+   flex-basis: 40%;
    color: white;
    background-color: 
     rgba(31, 32, 40, 0.433);
     border-radius: 20px;
-    margin: 0 30px 0 20px;
+    margin: 0 20px 0 20px;
 }
 #text-talk p {
     font-family: 'Verdana';
     font-size: 18px;
 }
+#open_control{
+    margin-top: 15px;
+    font-family: 'Verdana';
+    color: white;
+    font-size: 20px;
+}
 .box-scroll{
-    width: 1050px;
-    height:530px ;
+    flex-basis: 60%;
+    width: 900px;
+    height:650px ;
     text-align: center;
     border: 8px solid ;
     border-color: green;
     border-radius: 20px;
     background-color: rgba(31, 32, 40, 0.344);
-    overflow-y: scroll;
     animation: change_color_box_scroll 0.5s linear infinite;
 }
 @keyframes change_color_box_scroll{
@@ -485,6 +557,10 @@ body{
 #ads_web{display: none;}
 /*my picture*/
 /*my favorite*/
+#control_video{
+    top: 45px;
+}
+#control_ytb li{margin-top: 20%;}
 .favorite{display: block;}
 #video{
     padding: 2px 0 0 0;
@@ -501,7 +577,7 @@ iframe{
     border-radius: 20px;}
 .box-scroll{
         width: 100%;
-        height:630px ;
+        height:400px ;
         background-color: rgba(31, 32, 40, 0.344);
         border:6px solid;
         border-color: green;
