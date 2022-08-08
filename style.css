@@ -18,6 +18,7 @@
     100%{border-bottom-color: green;}
 }
 #list-control{
+    padding: 0;
     list-style: none;
     display: flex;
     margin: 15px 0 0 0;
@@ -28,7 +29,7 @@
     padding: 10px 60px 10px 60px;
     color: white;
     font-weight: 600 ;
-    margin: 0 15px 0 0;
+    margin: 0 ;
     font-family:'Verdana';
     animation: change_color 0.5s infinite linear;
     border-radius: 30px;
@@ -55,6 +56,8 @@ html{
     background-color: rgba(31, 32, 40, 0.344);
     min-height: 100%;
     height: 100%;
+    animation: change_color_title_music 1s linear infinite;
+
 }
 body{
     margin: 50px 0 0 0;
@@ -207,6 +210,113 @@ body::-webkit-scrollbar-thumb{
     border-bottom-right-radius: 20px;
 }
 /*favorite*/
+/*Music*/
+#music{
+    flex-basis: 30%;
+    color: white;
+    background-color: 
+     rgba(31, 32, 40, 0.433);
+     border-radius: 20px;
+     margin: 0 20px 0 20px;
+ }
+ #music p {
+     font-family: 'Verdana';
+     font-size: 18px;
+ }
+#title_music{
+    background-color: rgba(5, 34, 255, 0.207);
+    border: 2px solid yellow;
+    border-radius: 20px;
+    animation: change_color_title_music 1s linear infinite;
+}
+@keyframes change_color_title_music {
+    0%{background-color: rgba(5, 34, 255, 0.207);}
+    25%{background-color: rgba(255, 5, 5, 0.207);}
+    50%{background-color: rgba(5, 255, 9, 0.207);}
+    75%{background-color: rgba(255, 230, 5, 0.207);}
+    100%{background-color: rgba(5, 238, 255, 0.207);}
+}
+#screen_music{
+    font-family: 'Verdana';
+    color: white;
+    font-size: 20px;
+}
+#control_music_screen{
+    margin: 10px;
+}
+#control_music{
+    margin: 20px 0;
+}
+#control_music button{
+    cursor: pointer;
+    margin: 10px;
+    padding: 5px;
+    font-family: 'Verdana';
+    font-size: 20px;
+    color: white;
+    border: 2px solid blueviolet;
+    border-radius: 20px;
+    animation: change_color_title_music 1s linear infinite;
+
+}
+#list_music{
+    background-color:   rgba(31, 32, 40, 0.512) ;
+    color:white;
+    border: 1px solid  rgba(31, 32, 40, 0.592);
+    border-radius: 20px;
+    height: 345px;
+    width: 100%;
+
+}
+#list_music_scroll{
+    overflow-y: scroll;
+    font-family: 'Verdana';
+    height: 240px;
+}
+#list_music_scroll::-webkit-scrollbar{
+    width: 5px;
+}
+#list_music_scroll::-webkit-scrollbar-thumb{
+    border-radius: 50px;
+    background-image: linear-gradient(-50deg, red, blue);
+}
+
+ /*Video*/
+ #list_video_scroll{
+    overflow-y: scroll;
+    height: 60%;
+ }
+ #list_video_scroll::-webkit-scrollbar{
+    width: 10px;
+}
+#list_video_scroll::-webkit-scrollbar-thumb{
+    border-radius: 50px;
+    background-image: linear-gradient(0deg, yellow, blue);
+}
+ #control_vd_on_laptop{display: flex;}
+ #control_vd_on_laptop h3{
+    cursor: pointer;
+    padding: 5px;
+    margin: 10px 20px;
+    font-family: 'Verdana';
+    font-size: 18px;
+    color: white;
+    border: 2px solid yellow;
+    border-radius: 20px;
+    animation: change_color_title_music 1s linear infinite;
+ }
+ #control_vd_on_laptop h2{
+    cursor: pointer;
+    padding: 5px;
+    margin: 10px 13%;
+    font-family: 'Verdana';
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+    border: 2px solid red;
+    border-radius: 20px;
+ }
+ #open_control{display: none;}
 #control_ytb{
     list-style: none;
     padding: 0;
@@ -263,7 +373,7 @@ body::-webkit-scrollbar-thumb{
     text-align: center;
     color: white;
     background-color: 
-    rgb(31, 32, 40);
+    rgba(31, 32, 40, 0.793);
     border-radius: 20px;
     z-index: 1;
     top: 10%;
@@ -286,18 +396,6 @@ iframe{
     border-radius: 20px;
 }
 .favorite{display: flex;position: relative;}
-#text-talk{
-   flex-basis: 40%;
-   color: white;
-   background-color: 
-    rgba(31, 32, 40, 0.433);
-    border-radius: 20px;
-    margin: 0 20px 0 20px;
-}
-#text-talk p {
-    font-family: 'Verdana';
-    font-size: 18px;
-}
 #open_control{
     margin-top: 15px;
     font-family: 'Verdana';
@@ -305,7 +403,7 @@ iframe{
     font-size: 20px;
 }
 .box-scroll{
-    flex-basis: 60%;
+    flex-basis: 70%;
     width: 900px;
     height:650px ;
     text-align: center;
@@ -494,7 +592,7 @@ iframe{
     cursor: pointer;
     z-index: 1;
    }
-   #box_chat_mess{
+#box_chat_mess{
     display: block;
     position: fixed;
     top: 90%;
@@ -557,16 +655,21 @@ body{
 #ads_web{display: none;}
 /*my picture*/
 /*my favorite*/
+#open_control{display: block;}
+#control_vd_on_laptop{display: none;}
 #list_video{
     width: 100%;
-    height: 100%;
+    height: auto;
     font-size: 18px;
-    background-color: rgba(31, 32, 40, 0.344);
+    background-color: rgba(31, 32, 40, 0.664);
     margin: 10px 0;
-    position: static;
+    position:static;
     }
 #control_video{
     top: 45px;
+}
+#list_video_scroll{
+    height: 30%;
 }
 #control_ytb li{margin-top: 20%;}
 .favorite{display: block;}

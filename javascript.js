@@ -86,7 +86,7 @@
       });
     });
 setTimeout(function(){
-    document.getElementById('advertisement').style.display= 'block';
+    document.getElementById('advertisement').style.display= 'none';
 },1200);
 play_music=function(){
     const music=document.querySelector('#music_html');
@@ -101,8 +101,10 @@ stop_music=function(){
     music.pause();
 };
 
+
 var ad=1;
 var list_vd=[
+    "https://www.youtube.com/embed/8yRgYiNH39E?autoplay=1&mute=1",
     "https://www.youtube.com/embed/lpPBj3nEIiw?autoplay=1&mute=1",
     "https://www.youtube.com/embed/fOdML_XhHvQ?autoplay=1&mute=1",
     "https://www.youtube.com/embed/AvGBB367W38?autoplay=1&mute=1",
@@ -112,7 +114,12 @@ var list_vd=[
     "https://www.youtube.com/embed/RlDzHQ9D028?autoplay=1&mute=1",
     "https://www.youtube.com/embed/WvkTcNQsxzc?autoplay=1&mute=1",
     "https://www.youtube.com/embed/XyzaMpAVm3s?autoplay=1&mute=1",
-    "https://www.youtube.com/embed/2CmiA0HTNos?autoplay=1&mute=1"];
+    "https://www.youtube.com/embed/2CmiA0HTNos?autoplay=1&mute=1",
+    "https://www.youtube.com/embed/sNcLsXqC4PY?autoplay=1&mute=1",
+    "https://www.youtube.com/embed/79AMY0iycL8?autoplay=1&mute=1",
+    "https://www.youtube.com/embed/FJ2d-FPqDGE?autoplay=1&mute=1",
+    "https://www.youtube.com/embed/ifKKhj03TVM?autoplay=1&mute=1",
+    "https://www.youtube.com/embed/DXPkmoCVscs?autoplay=1&mute=1"];
 changeVD =function (){
     document.getElementById('screen').src=list_vd[ad];
     ad++;
@@ -122,7 +129,45 @@ changeVD =function (){
 }
 GTV=function(){
     var go_to_video=prompt('Nhập số thứ tự bài cần chuyển đến:');
-    document.getElementById('screen').src=list_vd[go_to_video-1];
+    if(go_to_video<=list_vd.length && go_to_video>0){
+    document.getElementById('screen').src=list_vd[go_to_video-1];}
+    else{
+        alert('STT bạn nhập không tồn tại.Tự động đưa tới bài đầu tiên!!!');
+        document.getElementById('screen').src=list_vd[0];
+    }
 }
-
-
+var list_mc=[
+"audio/dedendedi.mp3",
+"audio/banTrenTangLau.mp3",
+"audio/CangDamSauCangDauLofiVersion-NhuViet-6973559.mp3",
+"audio/31072LofiVersion-DuonggNauWnFreakD-6952501_hq.mp3",
+"audio/EmSayRoiLofiVersion-ThuongVoVux-6953606.mp3"
+];
+var name_mc=[
+"PIMRYPIE [COVER] - จากกันไปง่ายๆ (Dễ Đến Dễ Đi) _ Quang Hùng MasterD (128 kbps).",
+"Bên Trên Tầng Lầu Remix – Tăng Duy Tân x Th BAP (Zang Remix)",
+"Càng Đậm Sâu Càng Đau (Lofi Version)",
+"3 1 0 7 - 2 (Lofi Version)",
+"Em say rồi (lofi version)"
+];
+var mc=1
+changeMC=function(){
+    document.getElementById('control_music_screen').src=list_mc[mc];
+    document.getElementById('screen_music').innerHTML=name_mc[mc];
+    mc++;
+    if(mc==list_mc.length){
+        mc=0;
+    }
+}
+any_music=function(){
+    var input=prompt('Nhập số thứ tự bài hát cần chuyển:')
+    if(input<=list_mc.length && input>0){
+        document.getElementById('control_music_screen').src=list_mc[input-1];
+        document.getElementById('screen_music').innerHTML=name_mc[input-1];
+    }
+    else{
+        alert('STT bạn nhập không tồn tại.Tự động chạy bài đầu tiên!!!');
+        document.getElementById('control_music_screen').src=list_mc[0];
+        document.getElementById('screen_music').innerHTML=name_mc[0];
+    }
+}

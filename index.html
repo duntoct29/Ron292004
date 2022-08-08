@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,10 +22,10 @@
         <nav class="container">
             <img src="image/logo.png" alt="Rondo" id="logo" width="50">
             <ul id="list-control">
-                <li><a id="home" ><i style="color:rgb(45, 206, 94)" class="fa-solid fa-house"></i> Trang Chủ
+                <li><a id="home" ><i style="color:rgb(45, 206, 94);cursor: pointer;" class="fa-solid fa-house"></i> Trang Chủ
                 </a></li>
-                <li><a id="list_music" ><i style="color:rgb(45, 206, 94)" class="fa-solid fa-circle-user"></i>List Nhạc</a></li>
-                <li><a id="in4"><i style="color:rgb(45, 206, 94)" class="fa-solid fa-circle-user"></i> Giới Thiệu</a></li>
+                <li><a id="list_music" ><i style="color:rgb(45, 206, 94);cursor: pointer;" class="fa-solid fa-circle-user"></i>List Nhạc</a></li>
+                <li><a id="in4"><i style="color:rgb(45, 206, 94);cursor: pointer;" class="fa-solid fa-circle-user"></i> Giới Thiệu</a></li>
             </ul>
         </nav>
     </div>
@@ -43,9 +43,8 @@
         <div><img src="image/ads_web.png" alt="topic" id="ads_web" width="100%"></div>
         <div><img src="image/ads_mb_n.png" alt="topic" id="ads_mobile" width="100%"></div>
         
-        <audio id="music_html" src="audio/NeakkaKorDengYerngTlopSongSaKnea.mp3"> 
-        <audio id="music_ads" src="audio/bentrentanglau.mp3"></audio>   
-        </audio>
+        <audio id="music_html" src="audio/PIMRYPIE [COVER] - จากกันไปง่ายๆ (Dễ Đến Dễ Đi) _ Quang Hùng MasterD (128 kbps) (mp3cut.net).mp3"></audio>
+        <audio id="music_ads" src="audio/bentrentanglau.mp3"></audio>  
         </button>
     </div>
     
@@ -59,10 +58,17 @@
     <div class="favorite">
         <button class="box-scroll">
             <div id="video">
-              <iframe id="screen" src="https://www.youtube.com/embed/lpPBj3nEIiw?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; autoplay" allowfullscreen></iframe>
+              <iframe id="screen" src="https://www.youtube.com/embed/8yRgYiNH39E?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; autoplay" allowfullscreen></iframe>
             </div>
+
             <div id="open_control" ><i style="color:white;" class="fa-solid fa-up-right-from-square"></i> Bảng điều khiển</div>
-          </button>
+
+            <div id="control_vd_on_laptop">
+                <h3 onclick="changeVD()" class="advance">Chuyển bài</h3>
+                <h3 class="list_play">Danh sách phát</h3>
+                <h3 onclick="GTV()" id="GTV">Chuyển tới bài bất kì</h3>
+           </div>
+        </button>
 
           <div id="control_video">
             <div id="close_control_video">
@@ -81,28 +87,64 @@
             <div id="close_list_video">
                 <img src="image/x-png-icon-20.png" width="30" id="close_list"></div>
                 <h1 style="color: white;">Danh Sách Phát</h1>
-                <p>1.« Vietsub » Destiny tells me ♪ Heize</p>
-                <p>2.헤이즈 (Heize) - 비가 오는 날엔 (2021)(On Rainy Day) MV</p>
-                "3.Sick Enough To Die - MC Mong feat. Mellow [Vietsub + Engsub + Lyrics]</p>
-                <p>4.Sick Enough To Die (Part 2) - MC Mong Ft. Sweden Laundry [Vietsub + Engsub + Lyrics]</p>
-                <p>5.홍진영·퀵서비스, 가슴 먹먹해지는 애절한 무대 ‘산다는 건’ 《Fantastic Duo 2》 판타스틱 듀오 2 EP14</p>
-                <p>6.Ailee & duo 'I Will Go To You Like The First Snow' 《Fantastic Duo 2》 EP08</p>
-                <p>7.[4K] 에일리(AILEE)의 “WANNABE(by ITZY)” Band LIVE Ver.│숨도 안 쉬고 있지 노래 부르고 간 에일리💗[it’s KPOP LIVE 잇츠라이브]</p>
-                <p>8.[4K] MAMAMOO's KILLING VOICE with perfect HARMONY/Egoistic, HIP, Dinga, AYA | Dingo Music</p>
-                <p>9.[MV] DAVICHI(다비치) - This Love(이 사랑) l Descendants of the Sun 태양의 후예 OST</p>
-                <p> 10.Ánh Sao Và Bầu Trời - T.R.I x Cá x Quanvrox「Lofi Version by 1 9 6 7」 Audio Lyrics Video</p>
+                <div id="list_video_scroll">
+                <p>1.🔴 Deep Focus 24/7 - Ambient Music For Studying, Concentration, Work And Meditation
+                </p>
+                <p>2.« Vietsub » Destiny tells me ♪ Heize</p>
+                <p>3.헤이즈 (Heize) - 비가 오는 날엔 (2021)(On Rainy Day) MV</p>
+                <p>4.Sick Enough To Die - MC Mong feat. Mellow [Vietsub + Engsub + Lyrics]</p>
+                <p>5.Sick Enough To Die (Part 2) - MC Mong Ft. Sweden Laundry [Vietsub + Engsub + Lyrics]</p>
+                <p>6.홍진영·퀵서비스, 가슴 먹먹해지는 애절한 무대 ‘산다는 건’ 《Fantastic Duo 2》 판타스틱 듀오 2 EP14</p>
+                <p>7.Ailee & duo 'I Will Go To You Like The First Snow' 《Fantastic Duo 2》 EP08</p>
+                <p>8.[4K] 에일리(AILEE)의 “WANNABE(by ITZY)” Band LIVE Ver.│숨도 안 쉬고 있지 노래 부르고 간 에일리💗[it’s KPOP LIVE 잇츠라이브]</p>
+                <p>9.[4K] MAMAMOO's KILLING VOICE with perfect HARMONY/Egoistic, HIP, Dinga, AYA | Dingo Music</p>
+                <p>10.[MV] DAVICHI(다비치) - This Love(이 사랑) l Descendants of the Sun 태양의 후예 OST</p>
+                <p> 11.Ánh Sao Và Bầu Trời - T.R.I x Cá x Quanvrox「Lofi Version by 1 9 6 7」 Audio Lyrics Video</p>
+                <p>12.Những Bản Lofi Việt Nhẹ Nhàng Cực Chill - Nhạc Lofi Chill Buồn Nhất 2022 - Lofi Gây Nghiện Hay Nhất</p>
+                <p>13.Những Bản Nhạc Lofi Chill Hot Nhất 2022 - Nhạc Lofi Chill TikTok 2022 | Nhạc Hot TikTok 2022
+                </p>
+                <p>14.하루 종일 듣기 좋은 노래 🎶 일할때 듣기좋은 발라드 추천 광고없는 노래모음🎶 김범수 /임창정 /박효신/성시경/ 백지영/ 더원/태연/박명수/에일리/찬열, 펀치/다비치/로꼬, 펀치
+                </p>
+                <p>15.Dâu Miền Tây ( Mix Lofi ) | Tracy Thảo My ft. YUNIBOO | Edit Video By Money'sFi | Nhạc Trend Tiktok
+                </p>
+                <p>16.🔴Stop Overthinking 🌜 Calm Down And Relax - Late night vibes [ Live 24/7 ] ~ SpongeBob Lofi
+                </p>
+                </div>
           </div>
 
-          <div id="text-talk">
-            <h2 style="font-size: 22px ;font-family: 'Verdana';">Nice English Sayings</h2>
-                <p>“Love is when you shed a tear and still want him, It’s when he ignores you and you still love him, it’s when he loves another girl but you still smile and say I’m happy for you, when all you really do is cry”.</p>
-                <p>May the love hidden deep inside your heart find the love waiting in your dreams. May the laughter that you find in your tomorrow wipe away the pain you find in your yesterdays.</p>
-                <p>Mistakes made in life are our lessons in disguise. And sometimes, the best lessons learned, came from the worsr mistake made.</p>
-                <p>I’m selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can’t handle me at my worst, then you sure as hell don’t deserve me at my best. ― Marilyn Monroe</p>
+           <div id="music">
+
+             <div id="header_music">
+                <h2 style="font-size: 22px ;font-family: 'Verdana';"><img src="image/iconmusic.png" alt="iconmusic" width="45">
+                    Nhạc</h2>
+            </div>
+
+            <button id="title_music">
+                <div id="screen_music" behavior="scroll" direction="left">PIMRYPIE [COVER] - จากกันไปง่ายๆ (Dễ Đến Dễ Đi) _ Quang Hùng MasterD (128 kbps)</div>
+            </button>
+
+            <audio id="control_music_screen" controls src="audio/dedendedi.mp3"></audio>
+            <div id="control_music">
+               <button onclick="changeMC()" class="advance_music">Chuyển bài</button>
+               <button onclick="any_music()" class="any_music">Chuyển tới bài bất kì</button>
+            </div>
+
+            <div id="list_music">
+                <h2>Danh sách phát</h2>
+                <div id="list_music_scroll">
+                       <p>1.PIMRYPIE [COVER] - จากกันไปง่ายๆ (Dễ Đến Dễ Đi) _ Quang Hùng MasterD (128 kbps)</p>
+                       <p>2.Bên Trên Tầng Lầu Remix – Tăng Duy Tân x Th BAP (Zang Remix)</p>
+                       <p>3.Càng Đậm Sâu Càng Đau (Lofi Version)</p>
+                       <p>4.3 1 0 7 - 2 (Lofi Version)</p>
+                       <p>5.Em say rồi (lofi version)</p>
+                </div>
+            </div>
+             
           </div>
+
     </div>
 
-    <h1 id="my_profile" style="font-family: 'Verdana';color: red;"> My Profile</h1>
+    <h1 id="my_profile" style="font-family: 'Verdana';color: red;font-size: 35px;"> My Profile</h1>
     <div class="profile">
         <div id="main-profile">
             <button id="box-avt">
