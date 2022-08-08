@@ -86,7 +86,7 @@
       });
     });
 setTimeout(function(){
-    document.getElementById('advertisement').style.display= 'none';
+    document.getElementById('advertisement').style.display= 'block';
 },1200);
 play_music=function(){
     const music=document.querySelector('#music_html');

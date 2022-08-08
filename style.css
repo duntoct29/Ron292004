@@ -10,12 +10,12 @@
     color: white;
     z-index: 1;
     border-bottom: 1px solid rgb(218, 237, 71);
-    animation: change_color_header 1s linear infinite;
+    animation: change_color_header 2s linear infinite;
 }
 @keyframes change_color_header {
     0%{border-bottom-color: red;}
     50%{border-bottom-color: blue;}
-    100%{border-bottom-color: green;}
+    100%{border-bottom-color: black;}
 }
 #list-control{
     padding: 0;
@@ -24,14 +24,15 @@
     margin: 15px 0 0 0;
 }
 #list-control li a{
+    cursor: pointer;
     font-size: 18px;
     text-decoration: none;
     padding: 10px 60px 10px 60px;
-    color: white;
+    color: rgb(255, 255, 0);
     font-weight: 600 ;
     margin: 0 ;
     font-family:'Verdana';
-    animation: change_color 0.5s infinite linear;
+    animation: change_color 2s infinite linear;
     border-radius: 30px;
     background-color: rgba(255, 255, 255, 0.123);
     border: 4px solid yellow;
@@ -56,14 +57,17 @@ html{
     background-color: rgba(31, 32, 40, 0.344);
     min-height: 100%;
     height: 100%;
-    animation: change_color_title_music 1s linear infinite;
-
+    animation: change_color_html 1s linear infinite;
+}
+@keyframes change_color_html {
+    0%{background-color: rgba(2, 2, 82, 0.723);}
+    100%{background-color: rgba(0, 0, 0, 0.585);}
 }
 body{
     margin: 50px 0 0 0;
     min-height: 100%;
     height:100%;
-    transition: all 2s 0.5s ease-in-out;
+    transition: all 5s 0.5s ease-in-out;
     text-align: center;
     position: relative;
 }
@@ -85,65 +89,30 @@ body::-webkit-scrollbar-thumb{
     z-index: -1;
     top: 0;
     left: 0;
-    animation: spin_box_spin 3s linear infinite;
+    animation: spin_box_spin 7s linear infinite;
+    border-radius: 100%;
 }
 @keyframes spin_box_spin {
     0%{
-        border-top-left-radius: 30%;
-        border-top-right-radius: 80%;
-        border-bottom-right-radius: 90%;
-        border-bottom-left-radius: 100% ;
+        background-image: linear-gradient(95deg,rgb(0, 0, 63),red);
         transform: rotate(0deg);
     }
-    20%{
-        border-top-left-radius: 100%;
-        border-top-right-radius: 30%;
-        border-bottom-left-radius: 60% ;
-        border-bottom-right-radius: 80%;
-        transform: rotate(72deg);
-    }
-    40%{
-        border-top-left-radius: 80%;
-        border-top-right-radius: 100%;
-        border-bottom-right-radius: 70%;
-        border-bottom-left-radius: 30% ;
-        transform: rotate(144deg);
-    }
-    60%{
-        border-top-left-radius: 50%;
-        border-top-right-radius: 80%;
-        border-bottom-left-radius: 100% ;
-        border-bottom-right-radius: 80%;
-        transform: rotate(216deg);
-    }
-    80%{
-        border-top-left-radius: 40%;
-        border-top-right-radius: 80%;
-        border-bottom-right-radius: 50%;
-        border-bottom-left-radius: 90% ;
-        transform: rotate(288deg);
-    }
     100%{
-        border-top-left-radius: 60%;
-        border-top-right-radius: 100%;
-        border-bottom-left-radius: 90% ;
-        border-bottom-right-radius: 80%;
+        background-image: linear-gradient(95deg,red,black);
         transform: rotate(360deg);
     }
+  
    
 }
 #body_spin{
     width: 100%;
     height: 100%;
     border-radius: inherit;
-    animation: change_color_spin 5s linear infinite;
+    animation: change_color_spin 20s linear infinite;
 }
 @keyframes change_color_spin {
-    0%{ background-image: linear-gradient(95deg,rgb(255, 0, 204),rgb(255, 242, 0));}
-    25%{ background-image: linear-gradient(95deg,rgb(255, 242, 0),rgb(255, 0, 204));}
-    50%{background-image: linear-gradient(95deg,rgb(255, 0, 204),rgb(255, 242, 0));}
-    75%{ background-image: linear-gradient(95deg,rgb(255, 242, 0),rgb(255, 0, 204));}
-    100%{ background-image: linear-gradient(95deg,rgb(255, 0, 204),rgb(255, 242, 0));}
+    0%{ background-image: linear-gradient(95deg,red,black);transform: rotate(0deg);}
+    100%{ background-image: linear-gradient(95deg,rgb(0, 0, 63),red);transform: rotate(360deg);}
 }
 
 /*ads*/
@@ -167,35 +136,30 @@ body::-webkit-scrollbar-thumb{
 }
 @keyframes change_color {
     0%{
-        border-right-color: blue;
+        border-right-color: red;
         border-left-color: red; 
-        border-top-color: green;
-        border-bottom-color: yellow;
+        border-top-color: black;
+        border-bottom-color: black;
     }
-    25%{
-        border-right-color: yellow;
-        border-left-color: blue; 
+    45%{
+        border-right-color: black;
+        border-left-color: black; 
+        border-top-color: black;
+        border-bottom-color: black;
+    }
+    65%{
+        border-right-color: black;
+        border-left-color: black; 
         border-top-color: red;
-        border-bottom-color: green;
-    }
-    50%{
-        border-right-color: green;
-        border-left-color: yellow; 
-        border-top-color: blue;
         border-bottom-color: red;
     }
-    75%{
-        border-right-color: red;
-        border-left-color: green; 
-        border-top-color: yellow;
-        border-bottom-color: blue;
-    }
     100%{
-        border-right-color: blue;
-        border-left-color: red; 
-        border-top-color: green;
-        border-bottom-color: yellow;
+        border-right-color: black;
+        border-left-color: black; 
+        border-top-color: black;
+        border-bottom-color: black;
     }
+   
 }
 #close_ads{
     cursor: pointer;
@@ -225,16 +189,14 @@ body::-webkit-scrollbar-thumb{
  }
 #title_music{
     background-color: rgba(5, 34, 255, 0.207);
-    border: 2px solid yellow;
+    border: 2px solid rgb(144, 3, 3);
     border-radius: 20px;
     animation: change_color_title_music 1s linear infinite;
 }
 @keyframes change_color_title_music {
-    0%{background-color: rgba(5, 34, 255, 0.207);}
-    25%{background-color: rgba(255, 5, 5, 0.207);}
-    50%{background-color: rgba(5, 255, 9, 0.207);}
-    75%{background-color: rgba(255, 230, 5, 0.207);}
-    100%{background-color: rgba(5, 238, 255, 0.207);}
+    0%{background-color: rgba(0, 0, 0, 0.423);}
+    50%{background-color: rgba(82, 0, 0, 0.449);}
+    100%{background-color: rgba(0, 0, 111, 0.497);}
 }
 #screen_music{
     font-family: 'Verdana';
@@ -254,7 +216,7 @@ body::-webkit-scrollbar-thumb{
     font-family: 'Verdana';
     font-size: 20px;
     color: white;
-    border: 2px solid blueviolet;
+    border: 2px solid black;
     border-radius: 20px;
     animation: change_color_title_music 1s linear infinite;
 
@@ -266,6 +228,7 @@ body::-webkit-scrollbar-thumb{
     border-radius: 20px;
     height: 345px;
     width: 100%;
+    transition: all 5s ease-in-out;
 
 }
 #list_music_scroll{
@@ -301,20 +264,9 @@ body::-webkit-scrollbar-thumb{
     font-family: 'Verdana';
     font-size: 18px;
     color: white;
-    border: 2px solid yellow;
+    border: 2px solid rgb(82, 0, 0);
     border-radius: 20px;
-    animation: change_color_title_music 1s linear infinite;
- }
- #control_vd_on_laptop h2{
-    cursor: pointer;
-    padding: 5px;
-    margin: 10px 13%;
-    font-family: 'Verdana';
-    font-size: 18px;
-    color: black;
-    cursor: pointer;
-    border: 2px solid red;
-    border-radius: 20px;
+    animation: change_color_title_music 2s linear infinite;
  }
  #open_control{display: none;}
 #control_ytb{
@@ -382,6 +334,7 @@ body::-webkit-scrollbar-thumb{
     width: 70%;
     height: 80%;
     font-size: 20px;
+    transition: all 5s ease-in-out;
 }
 #close_list{cursor: pointer;}
 #close_list_video{
@@ -411,23 +364,7 @@ iframe{
     border-color: green;
     border-radius: 20px;
     background-color: rgba(31, 32, 40, 0.344);
-    animation: change_color_box_scroll 0.5s linear infinite;
-}
-@keyframes change_color_box_scroll{
-      0%{border-right-color: blue;
-        border-left-color: red; 
-        border-top-color: green;
-        border-bottom-color: yellow;} 
-     50%{
-        border-right-color: red;
-         border-left-color: green; 
-         border-top-color: yellow;
-         border-bottom-color: blue;} 
-    100%{
-        border-right-color: green;
-        border-left-color: yellow; 
-        border-top-color: blue;
-        border-bottom-color: red;} 
+    animation: change_color 2s linear infinite;
 }
 .box-scroll::-webkit-scrollbar{width: 10px;}
 .box-scroll::-webkit-scrollbar-thumb{
@@ -451,9 +388,9 @@ iframe{
     animation: change_color_text 1s linear infinite;
 }
 @keyframes change_color_text {
-    0%{color: red;}
-    50%{color: yellow;}
-    100%{color: blue;}
+    0%{color: black;}
+    50%{color: rgb(124, 124, 2);}
+    100%{color: red;}
 }
 #main-profile{
     flex-basis: 60%;
@@ -476,7 +413,7 @@ iframe{
     animation:  change_color_box 1s linear infinite;
 }
 @keyframes change_color_box {
-    0%{border-color: rgb(138, 0, 138);}
+    0%{border-color: black;}
     50%{border-color: red;}
     100%{border-color: blue;}
 }
@@ -487,7 +424,7 @@ iframe{
     border: 5px ;
     border-color: white;
     border-radius: 50%;
-    background-color: rgb(31 32 40);
+    background-color: rgba(31, 32, 40, 0.433);
     margin-top: 13px;
 }
 
@@ -541,7 +478,7 @@ iframe{
     font-family: 'Verdana';
     padding-left: 40px;
     margin-bottom: 0;
-    color: rgb(35, 116, 225);
+    color: rgb(255, 0, 0);
     text-align: center;
 }
 .my-infor ,.hobbies , .softs-skill ,.contact,.education{
@@ -575,7 +512,7 @@ iframe{
 @keyframes change_color_footer {
     0%{border-top-color: red;}
     50%{border-top-color: blue;}
-    100%{border-top-color: green;}
+    100%{border-top-color: black;}
 }
 .footer h2{
     font-family: 'Verdana';
