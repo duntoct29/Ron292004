@@ -1,6 +1,6 @@
 /*Header*/
 #header{
-    background-color:rgba(43, 43, 45, 0.771);
+    background-color:rgba(43, 43, 45, 0.886);
     height: 50px;
     border-radius: 0px;
     width: 100%;
@@ -566,7 +566,7 @@ nav{
 /*header*/
 #header{
     height: auto;
-    display: block;
+    display: none;
 }
 #logo{display: none;}
 #list-control{
@@ -577,7 +577,7 @@ nav{
     height: 70px;
 }
 body{
-    margin-top: 50px;
+    margin-top: 0;
 }
 /*ads*/
 .ads{

@@ -9,17 +9,19 @@
         }
     }
     setInterval(changeImage,2500);
-    $(document).ready(function(){
+
+$(document).ready(function(){
         $(window).scroll(function(){
-            if($(this).scrollTop()){
+            if($(this).scrollTop()!=0){
                 $('#back-top').fadeIn();
             }else{
                 $('#back-top').fadeOut();
             };
        });
+
        $('#back-top').click(function(){
-        $('html,body').animate({scrollTop:0},'slow');
-        stop_music();
+            $('html,body').animate({scrollTop:0},'slow');
+             stop_music();
        });
 
        $('#home').click(function(){
@@ -119,7 +121,8 @@ var list_vd=[
     "https://www.youtube.com/embed/79AMY0iycL8?autoplay=1&mute=1",
     "https://www.youtube.com/embed/FJ2d-FPqDGE?autoplay=1&mute=1",
     "https://www.youtube.com/embed/ifKKhj03TVM?autoplay=1&mute=1",
-    "https://www.youtube.com/embed/DXPkmoCVscs?autoplay=1&mute=1"];
+    "https://www.youtube.com/embed/DXPkmoCVscs?autoplay=1&mute=1",
+    "https://www.youtube.com/embed/SORD03t7nlo?autoplay=1&mute=1"];
 changeVD =function (){
     document.getElementById('screen').src=list_vd[ad];
     ad++;
