@@ -1,5 +1,5 @@
     var index = 1;
-    changeImage = function (){
+    var changeImage =()=>{
         var imgs = ["image/p1.png","image/p2.png","image/p3.png","image/p4.png","image/p5.png"];
         document.getElementById('img').src= imgs[index];
         index++;
@@ -21,7 +21,6 @@ $(document).ready(function(){
 
        $('#back-top').click(function(){
             $('html,body').animate({scrollTop:0},'slow');
-             stop_music();
        });
 
        $('#home').click(function(){
@@ -49,7 +48,6 @@ $(document).ready(function(){
         $('#advertisement').css({
             'display':'none'
         });
-        play_music();
        });
        $('#close_list').click(function(){
         $('#list_video').css({
@@ -87,25 +85,12 @@ $(document).ready(function(){
           });
       });
     });
-setTimeout(function(){
+setTimeout(()=>{
     document.getElementById('advertisement').style.display= 'block';
 },1200);
-play_music=function(){
-    const music=document.querySelector('#music_html');
-    music.play();
-    setTimeout(function(){
-        alert('Click nút mũi tên để tắt nhạc nhe 😉');
-    },400)
-    
-};
-stop_music=function(){
-    const music=document.querySelector('#music_html');
-    music.pause();
-};
-
 
 var ad=1;
-var list_vd=[
+const list_vd=[
     "https://www.youtube.com/embed/8yRgYiNH39E?autoplay=1&mute=1",
     "https://www.youtube.com/embed/lpPBj3nEIiw?autoplay=1&mute=1",
     "https://www.youtube.com/embed/fOdML_XhHvQ?autoplay=1&mute=1",
@@ -123,14 +108,14 @@ var list_vd=[
     "https://www.youtube.com/embed/ifKKhj03TVM?autoplay=1&mute=1",
     "https://www.youtube.com/embed/DXPkmoCVscs?autoplay=1&mute=1",
     "https://www.youtube.com/embed/SORD03t7nlo?autoplay=1&mute=1"];
-changeVD =function (){
+var changeVD =()=>{
     document.getElementById('screen').src=list_vd[ad];
     ad++;
     if(ad==list_vd.length){
         ad=0;
     }
 }
-GTV=function(){
+var GTV=()=>{
     var go_to_video=prompt('Nhập số thứ tự bài cần chuyển đến:');
     if(go_to_video<=list_vd.length && go_to_video>0){
     document.getElementById('screen').src=list_vd[go_to_video-1];}
@@ -139,14 +124,14 @@ GTV=function(){
         document.getElementById('screen').src=list_vd[0];
     }
 }
-var list_mc=[
+const list_mc=[
 "audio/dedendedi.mp3",
 "audio/banTrenTangLau.mp3",
 "audio/CangDamSauCangDauLofiVersion-NhuViet-6973559.mp3",
 "audio/31072LofiVersion-DuonggNauWnFreakD-6952501_hq.mp3",
 "audio/EmSayRoiLofiVersion-ThuongVoVux-6953606.mp3"
 ];
-var name_mc=[
+const name_mc=[
 "PIMRYPIE [COVER] - จากกันไปง่ายๆ (Dễ Đến Dễ Đi) _ Quang Hùng MasterD (128 kbps).",
 "Bên Trên Tầng Lầu Remix – Tăng Duy Tân x Th BAP (Zang Remix)",
 "Càng Đậm Sâu Càng Đau (Lofi Version)",
@@ -154,7 +139,7 @@ var name_mc=[
 "Em say rồi (lofi version)"
 ];
 var mc=1
-changeMC=function(){
+var changeMC=()=>{
     document.getElementById('control_music_screen').src=list_mc[mc];
     document.getElementById('screen_music').innerHTML=name_mc[mc];
     mc++;
@@ -162,7 +147,7 @@ changeMC=function(){
         mc=0;
     }
 }
-any_music=function(){
+any_music=()=>{
     var input=prompt('Nhập số thứ tự bài hát cần chuyển:')
     if(input<=list_mc.length && input>0){
         document.getElementById('control_music_screen').src=list_mc[input-1];
