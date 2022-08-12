@@ -67,7 +67,7 @@ body{
     margin: 50px 0 0 0;
     min-height: 100%;
     height:100%;
-    transition: all 5s 0.5s ease-in-out;
+    transition: all 10s ease-in-out;
     text-align: center;
     position: relative;
 }
@@ -202,6 +202,9 @@ body::-webkit-scrollbar-thumb{
     font-family: 'Verdana';
     color: white;
     font-size: 20px;
+}
+#screen_music:hover{
+    font-size: 40px;
 }
 #control_music_screen{
     margin: 10px;
@@ -444,20 +447,6 @@ iframe{
     margin-top: 0;
     color:white
 }
-.education{
-    text-align: left;
-    font-family: 'Verdana';
-    list-style: none;
-    margin-top: 0;
-    color: white;
-}
-.softs-skill{
-    text-align: left;
-    font-family: 'Verdana';
-    list-style: none;
-    margin-top: 0;
-    color: white;
-}
 .contact{
     text-align: left;
     font-family: 'Verdana';
@@ -481,17 +470,17 @@ iframe{
     color: rgb(255, 0, 0);
     text-align: center;
 }
-.my-infor ,.hobbies , .softs-skill ,.contact,.education{
+.my-infor ,.hobbies ,.contact{
     text-align: center;
 }
-.my-infor li ,.hobbies li , .softs-skill li ,.contact li,.education li{
+.my-infor li ,.hobbies li , .softs-skill li ,.contact li{
    margin-bottom: 8px;
 }
 #b3,#b4,#b5{
     margin-top: 50px;
     margin-bottom: 10px;
 }
-.education li , .contact li , .softs-skill li{
+.contact li {
     margin-bottom: 15px;
 }
 .contact li:hover a{
@@ -638,7 +627,7 @@ iframe{
 #b1,#b2,#b3,#b4,#b5{
     padding-left: 0;
 }
-.my-infor ,.hobbies , .softs-skill ,.contact,.education{
+.my-infor ,.hobbies , .contact{
     padding-left: 0;
 }
 #main-profile{
