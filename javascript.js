@@ -1,6 +1,11 @@
     var index = 1;
     var changeImage =()=>{
-        var imgs = ["image/p1.png","image/p2.png","image/p3.png","image/p4.png","image/p5.png"];
+        var imgs = [
+            "image/p1.png",
+            "image/p2.png",
+            "image/p3.png",
+            "image/p4.png",
+            "image/p5.png"];
         document.getElementById('img').src= imgs[index];
         index++;
         if (index==5)
@@ -9,7 +14,6 @@
         }
     }
     setInterval(changeImage,2500);
-
 $(document).ready(()=>{
         $(window).scroll(()=>{
             if($(this).scrollTop()){
